@@ -1,12 +1,12 @@
 ---
-
+import video from '/public/imagenes/video.mp4'
 ---
 
 <section class="w-full relative">
   <picture>
     <source srcset="/public/imagenes/video.webm" type="video/webm" />
     <source srcset="/public/imagenes/video.mp4" type="video/mp4" />
-    <video class="w-full h-auto rounded-xl aspect-video object-cover" src="/public/imagenes/video.mp4" autoplay loop muted playsinline></video>
-    <video class="absolute -bottom-5 blur-3xl -z-40" src="/public/imagenes/video.mp4" autoplay loop muted playsinline ></video>
+    <video class="w-full h-auto rounded-xl aspect-video object-cover" src={video} autoplay loop muted playsinline></video>
+    <video class="absolute -bottom-5 blur-3xl -z-40" src={video} autoplay loop muted playsinline ></video>
   </picture>
 </section>
