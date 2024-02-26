@@ -1,0 +1,70 @@
+---
+import iconHeader from '../../public/logos/logo3.png'
+---
+
+<header id="header-nav" class="fixed z-50 w-full text-gray-400  backdrop-blur-sm body-font">
+  <div class="mx-auto flex py-2 px-1 md:flex-row items-center justify-around md:justify-between">
+    <a href="/">
+      <img src={iconHeader.src} class="h-10 w-auto lg:ml-9 cursor-pointer" alt="Coscu Army Logo" />
+    </a>
+    <div class="hidden md:ml-auto md:mr-auto md:flex items-center text-base justify-center">
+      <ul class="flex cursor-pointer">
+        <li>
+          <a href="/Ganadores" class="mr-5 hover:text-white">Ganadores</a>
+        </li>
+        <li>
+          <a href="/Eventos" class="mr-5 hover:text-white">Peleas</a>
+        </li>
+        <li>
+          <a href="/Imagenes" class="mr-5 hover:text-white">Imagenes</a>
+        </li>
+        <!-- <a href="https://www.instagram.com/p/C1QRq8HLt4s" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-white bg-[#c3ac7c] hover:bg-[#9d8a63] border-0 py-1 px-3 focus:outline-none rounded-full text-base md:mt-0">Documental <span class="ml-1">&rarr;</span> </a> -->
+      </ul>
+    </div>
+    <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden border-2 border-[#c3ac7c] focus:border-none focus:outline-none focus:ring-2 focus:ring-[#c3ac7c]" aria-controls="navbar-cta" aria-expanded="false">
+      <svg class="w-6 h-6" aria-hidden="true" fill="none" id="openSidebar" viewBox="0 0 17 14">
+        <path stroke="#c3ac7c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+      </svg>
+      <svg id="closeSidebar" class="cursor-pointer hidden" width="28" height="28" viewBox="0 0 24 24"><path d="M24 0v24H0V0zM12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z"/><path fill="#c3ac7c" d="M6.06 3.94a1.5 1.5 0 1 0-2.12 2.12l4.17 4.172a5.5 5.5 0 0 0 7.78 0l4.17-4.171a1.5 1.5 0 0 0-2.12-2.122l-4.172 4.172a2.5 2.5 0 0 1-3.536 0zm0 16.12a1.5 1.5 0 0 1-2.12-2.12l4.17-4.172a5.5 5.5 0 0 1 7.78 0l4.17 4.171a1.5 1.5 0 0 1-2.12 2.122l-4.172-4.172a2.5 2.5 0 0 0-3.536 0z"/></g></svg>
+    </button>
+  </div>
+</header>
+<nav id="mobile-menu" class="bg-black/40 backdrop-blur-sm w-full flex-col items-center text-center text-2xl fixed top-0 left-0 right-0 h-dvh place-content-center hidden z-10">
+  <a href="/Ganadores"  class="uppercase my-4 hover:outline-none text-white">Ganadores</a>
+  <a href="/Eventos"  class="uppercase my-4 hover:outline-none text-white">Eventos</a>
+  <a href="/Imagenes"  class="uppercase my-4 hover:outline-none text-white">Imagenes</a>
+  <!-- <a href="https://www.instagram.com/p/C1QRq8HLt4s" target="_blank" rel="noopener noreferrer" class="my-4 whitespace-nowrap text-center lg:hidden w-fit lg:text-2xl font-medium text-white no-underline px-5 py-3 bg-[#c3ac7c] hover:bg-[#9d8a63] rounded-full uppercase">Documental <span class="ml-1">&rarr;</span> </a> -->
+</nav>
+
+<script>
+  const openSidebar = document.getElementById("openSidebar");
+  const closeSidebar = document.getElementById("closeSidebar");
+  const sidebar = document.getElementById("mobile-menu");
+  openSidebar?.addEventListener("click", () => {
+    sidebar?.classList.remove("hidden");
+    sidebar?.classList.add("flex");
+    closeSidebar?.classList.remove("hidden");
+    openSidebar.classList.add("hidden");
+  });
+  closeSidebar?.addEventListener("click", () => {
+    sidebar?.classList.remove("flex");
+    sidebar?.classList.add("hidden");
+    openSidebar?.classList.remove("hidden");
+    closeSidebar.classList.add("hidden");
+  }); 
+</script>
+
+<style>
+  #header-nav {
+			animation: blur linear both;
+			animation-timeline: scroll();
+			animation-range: 0 500px;
+		}
+	@keyframes blur {
+		to {
+			box-shadow: 0px 5px 50px -5px hsla(0, 0%, 100%, 0.1), 0px 0px 0px 1px hsla(0, 0%, 100%, 0.1);
+			background: rgba(0, 0, 0, 0.3);
+			backdrop-filter: blur(10px);
+		}
+    }
+</style>
