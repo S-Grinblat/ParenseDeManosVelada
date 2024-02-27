@@ -12,14 +12,12 @@ import video from '/public/imagenes/video.mp4'
 </section>
 
 <script>
-  const videoPrimary = document.getElementById('video-primary');
-  const videoSecondary = document.getElementById('video-secondary');
-
-  videoPrimary?.addEventListener('play', sincronizarVideos);
-  videoSecondary?.addEventListener('play', sincronizarVideos);
-
-function sincronizarVideos() {
-  const videos = [ videoPrimary, videoSecondary ];
+const videoPrimary = document.getElementById('video-primary') as HTMLVideoElement;
+const videoSecondary = document.getElementById('video-secondary') as HTMLVideoElement;
+videoPrimary.addEventListener('play', sincronizarVideos);
+videoSecondary.addEventListener('play', sincronizarVideos);
+function sincronizarVideos(this: HTMLVideoElement) {
+  const videos: HTMLVideoElement[] = [videoPrimary, videoSecondary];
   videos.forEach(video => {
     if (video !== this) {
       video.currentTime = this.currentTime;
