@@ -3,20 +3,18 @@ import iconHeader from '../../public/logos/logo3.png'
 ---
 
 <header id="header-nav" class="fixed z-50 w-full text-gray-400  backdrop-blur-sm body-font">
-  <div class="mx-auto flex py-2 px-1 md:flex-row items-center justify-around md:justify-between">
-    <a href="/">
-      <img src={iconHeader.src} class="h-10 w-auto lg:ml-9 cursor-pointer" alt="Coscu Army Logo" />
-    </a>
-    <div class="hidden md:ml-auto md:mr-auto md:flex items-center text-base justify-center">
+  <div class="mx-auto flex py-2 px-1 md:flex-row items-center justify-around md:justify-evenly">
+    <img src={iconHeader.src} class="h-10 w-30 lg:ml-9" alt="Logo parense de manos" />
+    <div class="hidden md:flex items-center text-base justify-center">
       <ul class="flex cursor-pointer">
         <li>
-          <a href="/Ganadores" class="mr-5 hover:text-white">Ganadores</a>
+          <a href="/Ganadores" class="mr-5 text-white hover:text-gray-400 hover:border-b-2 hover:border-[#679FF0]">Ganadores</a>
         </li>
         <li>
-          <a href="/Eventos" class="mr-5 hover:text-white">Peleas</a>
+          <a href="/Eventos" class="mr-5 text-white hover:text-gray-400 hover:border-b-2 hover:border-[#679FF0]">Peleas</a>
         </li>
         <li>
-          <a href="/Imagenes" class="mr-5 hover:text-white">Imagenes</a>
+          <a href="/Imagenes" class="mr-5 text-white hover:text-gray-400 hover:border-b-2 hover:border-[#679FF0]">Imagenes</a>
         </li>
         <!-- <a href="https://www.instagram.com/p/C1QRq8HLt4s" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-white bg-[#c3ac7c] hover:bg-[#9d8a63] border-0 py-1 px-3 focus:outline-none rounded-full text-base md:mt-0">Documental <span class="ml-1">&rarr;</span> </a> -->
       </ul>
@@ -31,7 +29,7 @@ import iconHeader from '../../public/logos/logo3.png'
 </header>
 <nav id="mobile-menu" class="bg-black/40 backdrop-blur-sm w-full flex-col items-center text-center text-2xl fixed top-0 left-0 right-0 h-dvh place-content-center hidden z-10">
   <a href="/Ganadores"  class="uppercase my-4 hover:outline-none text-white">Ganadores</a>
-  <a href="/Eventos"  class="uppercase my-4 hover:outline-none text-white">Eventos</a>
+  <a href="/Eventos"  class="uppercase my-4 hover:outline-none text-white">Peleas</a>
   <a href="/Imagenes"  class="uppercase my-4 hover:outline-none text-white">Imagenes</a>
   <!-- <a href="https://www.instagram.com/p/C1QRq8HLt4s" target="_blank" rel="noopener noreferrer" class="my-4 whitespace-nowrap text-center lg:hidden w-fit lg:text-2xl font-medium text-white no-underline px-5 py-3 bg-[#c3ac7c] hover:bg-[#9d8a63] rounded-full uppercase">Documental <span class="ml-1">&rarr;</span> </a> -->
 </nav>
@@ -56,15 +54,15 @@ import iconHeader from '../../public/logos/logo3.png'
 
 <style>
   #header-nav {
-			animation: blur linear both;
-			animation-timeline: scroll();
-			animation-range: 0 500px;
-		}
+    animation: blur linear both;
+    animation-timeline: scroll();
+    animation-range: 0 500px;
+  }
 	@keyframes blur {
 		to {
 			box-shadow: 0px 5px 50px -5px hsla(0, 0%, 100%, 0.1), 0px 0px 0px 1px hsla(0, 0%, 100%, 0.1);
 			background: rgba(0, 0, 0, 0.3);
 			backdrop-filter: blur(10px);
 		}
-    }
+  }
 </style>
