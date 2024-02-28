@@ -3,11 +3,13 @@ import video from '/public/imagenes/video.mp4'
 ---
 
 <section class="w-full relative">
+  <h1 class="text-4xl font-bold text-center pb-4 uppercase tracking-widest text-pretty">Esto ha sido la primera edición de Párense de Manos</h1>
+  <p class="text-white text-center text-2xl pb-4">Los esperamos en 2024 con mucho más</p>
   <picture class="video-container">
     <source srcset="/public/imagenes/video.webm" type="video/webm" />
     <source srcset="/public/imagenes/video.mp4" type="video/mp4" />
-    <video id="video-primary" class="w-full h-auto rounded-xl aspect-video object-cover animate-fade animate-ease-in-out animate-duration-1000" src={video} autoplay loop muted controls playsinline></video>
-    <video id="video-secondary" class="absolute -bottom-5 blur-3xl -z-40 " src={video} autoplay loop muted ></video>
+    <video id="video-primary" class="w-full h-auto rounded-xl aspect-video object-cover animate-fade animate-ease-in-out animate-duration-1000" src={video} loop muted controls playsinline></video>
+    <video id="video-secondary" class="absolute -bottom-5 blur-3xl -z-40 " src={video} loop muted ></video>
   </picture>
 </section>
 
