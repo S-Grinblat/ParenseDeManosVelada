@@ -1,0 +1,17 @@
+---
+interface Props {
+  title: string
+  subtitle?: string
+  class?: string
+}
+const {title} = Astro.props
+---
+
+<article class={`${Astro.props.class} col-span-5 relative rounded-xl backdrop-blur-md border border-black/10 shadow-inner shadow-white/10 group`}>
+  <div class="absolute top-0 bottom-0 z-10 w-full h-full bg-gradient-to-b from-transparent from-40% via-black/50 to-black/80 rounded-xl group-hover:scale-105 transition-scale duration-300 ease-in-out"></div>
+  <div class=" select-none flex flex-col gap-1 p-6 text-lg z-20 justify-end h-full">
+    <slot name="image"></slot>
+    <h2 class="text-3xl font-semibold z-30 text-white text-balance mb-4">{title}</h2>
+    <slot name="content"></slot>
+  </div>
+</article>
