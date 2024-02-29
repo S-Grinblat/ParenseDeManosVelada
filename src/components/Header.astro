@@ -1,27 +1,13 @@
 ---
 import iconHeader from '../../public/logos/logo3.png'
+import LinksListHeader from './LinksListHeader.astro';
+import NavHeader from './NavHeader.astro';
 ---
 
 <header id="header-nav" class="fixed z-50 w-full text-gray-400  backdrop-blur-sm body-font">
   <div class="mx-auto flex py-2 px-1 md:flex-row items-center justify-around md:justify-evenly">
     <img src={iconHeader.src} class="h-12 w-32 lg:ml-9" alt="Logo parense de manos" />
-    <div class="hidden md:flex items-center text-base justify-center">
-      <ul class="flex cursor-pointer">
-        <li>
-          <a href="/Ganadores" class="mr-5 text-white hover:text-gray-400 hover:border-b-2 hover:border-[#c3ac7c]" title="Ganadores">Ganadores</a>
-        </li>
-        <li>
-          <a href="/Peleas" class="mr-5 text-white hover:text-gray-400 hover:border-b-2 hover:border-[#c3ac7c]" title="Peleas">Peleas</a>
-        </li>
-        <li>
-          <a href="/Pesajes" class="mr-5 text-white hover:text-gray-400 hover:border-b-2 hover:border-[#c3ac7c]" title="Pesos">Pesajes</a>
-        </li>
-        <li>
-          <a href="/Pesajes" class="mr-5 text-white hover:text-gray-400 hover:border-b-2 hover:border-[#c3ac7c]" title="Pesos">Cantantes</a>
-        </li>
-        <a href="https://www.youtube.com/watch?v=4vy1Jv0dAmc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-white bg-[#c3ac7c] hover:bg-[#9d8a63] border-0 py-1 px-3 focus:outline-none rounded-full text-base md:mt-0" title="Evento completo en YouTube">Evento Completo <span class="ml-1">&rarr;</span> </a>
-      </ul>
-    </div>
+    <LinksListHeader/>
     <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden border-2 border-[#c3ac7c] focus:border-none focus:outline-none focus:ring-2 focus:ring-[#c3ac7c]" aria-controls="navbar-cta" aria-expanded="false">
       <svg class="w-6 h-6" aria-hidden="true" fill="none" id="openSidebar" viewBox="0 0 17 14">
         <path stroke="#c3ac7c" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
@@ -30,13 +16,7 @@ import iconHeader from '../../public/logos/logo3.png'
     </button>
   </div>
 </header>
-<nav id="mobile-menu" class="bg-black/40 backdrop-blur-sm w-full flex-col items-center text-center text-2xl fixed top-0 left-0 right-0 h-dvh place-content-center hidden z-10">
-  <a href="/Ganadores"  class="uppercase my-4 hover:outline-none text-white" title="Ganadores">Ganadores</a>
-  <a href="/Peleas"  class="uppercase my-4 hover:outline-none text-white" title="Peleas">Peleas</a>
-  <a href="/Pesajes"  class="uppercase my-4 hover:outline-none text-white" title="Pesos">Pesajes</a>
-  <a href="/Pesajes"  class="uppercase my-4 hover:outline-none text-white" title="Pesos">Cantantes</a>
-  <a href="https://www.youtube.com/watch?v=4vy1Jv0dAmc" target="_blank" rel="noopener noreferrer" class="my-4 whitespace-nowrap text-center lg:hidden w-fit lg:text-2xl font-medium text-white no-underline px-5 py-3 bg-[#c3ac7c] hover:bg-[#9d8a63] rounded-full uppercase" title="Evento completo en YouTube">Evento Completo <span class="ml-1">&rarr;</span> </a>
-</nav>
+<NavHeader />
 
 <script>
   const openSidebar = document.getElementById("openSidebar");

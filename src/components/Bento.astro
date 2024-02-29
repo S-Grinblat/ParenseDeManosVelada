@@ -2,21 +2,23 @@
 import BentoItem from './BentoItem.astro';
 import img1 from '../../public/ganadores/piti.webp'
 import img2 from '../../public/imagenes/cantantes.webp'
+import img3 from '../../public/imagenes/Pelea.webp'
+import img4 from '../../public/imagenes/pesaje.png'
 ---
 
 <section class="pt-10">
-  <div class={`w-[1024px] sm:w-full max-w-[1400px] grid grid-cols-1 sm:grid-cols-10 auto-rows-[20rem] gap-4 mx-auto p-2 lg:px-20 lg:py-10`}>
+  <div class={`w-80 sm:w-full max-w-[1400px] grid grid-cols-1 sm:grid-cols-10 auto-rows-[20rem] gap-4 mx-auto p-2 lg:px-20 lg:py-10`}>
     <BentoItem class="col-span-10 sm:col-start-2 sm:col-end-5" title="GANADORES">
       <div slot="image" class="absolute left-0 top-0 w-full h-full rounded-xl group-hover:scale-105 transition-scale duration-300 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat -z-10" style={`background-image: url('${img1.src}') `}></div>
     </BentoItem>
     <BentoItem class="col-span-10 sm:col-start-5 sm:col-end-10" title="CANTANTES">
       <div slot="image" class="absolute left-0 top-0 w-full h-full rounded-xl group-hover:scale-105 transition-scale duration-300 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat -z-10" style={`background-image: url('${img2.src}`}></div>
     </BentoItem>
-    <BentoItem class="col-span-10 sm:col-start-2 sm:col-end-7" title="EVENTOS">
-      <!-- <div slot="image" class="absolute left-0 top-0 w-full h-full rounded-xl group-hover:scale-105 transition-scale duration-700 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat -z-10" style={`background-image: url('${img3.src}`}></div> -->
+    <BentoItem class="col-span-10 sm:col-start-2 sm:col-end-7" title="PELEAS">
+      <div slot="image" class="absolute left-0 top-0 w-full h-full rounded-xl group-hover:scale-105 transition-scale duration-300 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat -z-10" style={`background-image: url('${img3.src}`}></div>
     </BentoItem>
-    <BentoItem class="col-span-10 sm:col-start-7 sm:col-end-10" title="IMAGENES">
-      <!-- <div slot="image" class="absolute left-0 top-0 w-full h-full rounded-xl group-hover:scale-105 transition-scale duration-700 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat -z-10" style={`background-image: url('${img4.src}`}></div> -->
+    <BentoItem class="col-span-10 sm:col-start-7 sm:col-end-10" title="PESAJES">
+      <div slot="image" class="absolute left-0 top-0 w-full h-full rounded-xl group-hover:scale-105 transition-scale duration-300 ease-in-out opacity-90 bg-center bg-cover bg-no-repeat -z-10" style={`background-image: url('${img4.src}`}></div>
     </BentoItem>
   </div>
 </section>
