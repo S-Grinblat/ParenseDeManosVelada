@@ -1,0 +1,25 @@
+---
+import video from '/public/imagenes/video.mp4'
+---
+<picture class="video-container">
+  <source srcset="/public/imagenes/video.webm" type="video/webm" />
+  <source srcset="/public/imagenes/video.mp4" type="video/mp4" />
+  <video id="video-primary" class="w-full h-auto rounded-xl aspect-video object-cover animate-fade animate-ease-in-out animate-duration-1000" src={video} loop muted controls playsinline></video>
+  <video id="video-secondary" class="absolute -bottom-5 blur-3xl -z-40 " src={video} loop muted ></video>
+</picture>
+
+<script>
+  const videoPrimary = document.getElementById('video-primary') as HTMLVideoElement;
+  const videoSecondary = document.getElementById('video-secondary') as HTMLVideoElement;
+  videoPrimary.addEventListener('play', sincronizarVideos);
+  videoSecondary.addEventListener('play', sincronizarVideos);
+  function sincronizarVideos(this: HTMLVideoElement) {
+    const videos: HTMLVideoElement[] = [videoPrimary, videoSecondary];
+    videos.forEach(video => {
+      if (video !== this) {
+        video.currentTime = this.currentTime;
+        video.play();
+      }
+    });
+  }
+</script>
