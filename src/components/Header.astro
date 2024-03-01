@@ -6,7 +6,9 @@ import NavHeader from './NavHeader.astro';
 
 <header id="header-nav" class="fixed z-50 w-full text-gray-400  backdrop-blur-sm body-font">
   <div class="mx-auto flex py-2 px-1 md:flex-row items-center justify-around md:justify-evenly">
-    <img src={iconHeader.src} class="h-12 w-32 lg:ml-9" alt="Logo parense de manos" />
+    <a href="/">
+      <img src={iconHeader.src} class="h-12 w-32 lg:ml-9" alt="Logo parense de manos" />
+    </a>
     <LinksListHeader/>
     <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden border-2 border-[#c3ac7c] focus:border-none focus:outline-none focus:ring-2 focus:ring-[#c3ac7c]" aria-controls="navbar-cta" aria-expanded="false">
       <svg class="w-6 h-6" aria-hidden="true" fill="none" id="openSidebar" viewBox="0 0 17 14">
