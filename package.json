@@ -15,9 +15,11 @@
     "@fontsource-variable/foldit": "^5.0.18",
     "astro": "^4.4.4",
     "tailwindcss": "^3.4.1",
+    "three": "^0.162.0",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@types/three": "^0.162.0",
     "standard": "^17.1.0",
     "tailwindcss-animated": "^1.0.1"
   }

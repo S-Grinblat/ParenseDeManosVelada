@@ -1,0 +1,106 @@
+
+{
+  "luchadores": {
+    "pelea1": [
+      {
+        "src": "../../public/imagenes/ambos.png"
+      },
+      {
+        "nombre": "Valentin",
+        "peso": 65.3,
+        "edad": 19,
+        "altura": 1.79
+      },
+      {
+        "nombre": "Palito",
+        "peso": 72.2,
+        "edad": 21,
+        "altura": 1.85
+      }
+    ],
+    "pelea2": [
+      {
+        "nombre": "Seleneitor",
+        "peso": 55.5,
+        "edad": 25,
+        "altura": 1.62
+      },
+      {
+        "nombre": "Juli Savioli",
+        "peso": 57.1,
+        "edad": 21,
+        "altura": 1.64
+      }
+    ],
+    "pelea3": [
+      {
+        "nombre": "Coker",
+        "peso": 89.1,
+        "edad": 25,
+        "altura": 1.82
+      },
+      {
+        "nombre": "Piti Fernandez",
+        "peso": 81.6,
+        "edad": 41,
+        "altura": 1.68
+      }
+    ],
+    "pelea4": [
+      {
+        "nombre": "Chapu Martinez",
+        "peso": 114.5,
+        "edad": 29,
+        "altura": 1.75
+      },
+      {
+        "nombre": "La Cobra",
+        "peso": 105.1,
+        "edad": 26,
+        "altura": 1.82
+      }
+    ],
+    "pelea5": [
+      {
+        "nombre": "Milica",
+        "peso": 63,
+        "edad": 22,
+        "altura": 1.57
+      },
+      {
+        "nombre": "Mili Mansilla",
+        "peso": 47,
+        "edad": 23,
+        "altura": 1.50
+      }
+    ],
+    "pelea6": [
+      {
+        "nombre": "Zzk",
+        "peso": 80.5,
+        "edad": 30,
+        "altura": 1.93
+      },
+      {
+        "nombre": "FranKaster",
+        "peso": 68.4,
+        "edad": 26,
+        "altura": 1.59
+      }
+    ],
+    "pelea7": [
+      {
+        "nombre": "Grego",
+        "peso": 73.2,
+        "edad": 32,
+        "altura": 1.70
+      },
+      {
+        "nombre": "Rober Galati",
+        "peso": 80.6,
+        "edad": 39,
+        "altura": 1.83
+      }
+    ]
+  }
+}
